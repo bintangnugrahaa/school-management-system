@@ -26,7 +26,7 @@
               <div class="card-body">
                 <div class="form-group">
                   <label for="name">Academic Year</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter academic year">
+                  <input type="number" name="name" class="form-control" id="name" placeholder="Enter academic year">
                 </div>
                 @error('name')
                 <p class="text-danger">{{ $message }}</p>
@@ -63,6 +63,8 @@
             icon: 'success',
             timer: 1000,
             showConfirmButton: false
+          }).then(function() {
+            window.location.href = "{{ route('academic-year.read') }}";
           });
           $('#academicYearForm')[0].reset();
         },
