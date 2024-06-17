@@ -61,7 +61,7 @@
 
             <li class="nav-item">
               <a href="{{ route('admin.dashboard') }}" class="nav-link">
-                <i class="nav-icon fas fa-th"></i>
+                <i class="nav-icon fas fa-server"></i>
                 <p>
                   Dashboard
                 </p>
@@ -69,23 +69,45 @@
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-chart-pie"></i>
+                <i class="nav-icon fas fa-calendar"></i>
                 <p>
-                  Academic Year
+                  Academic Year Mgmt
                   <i class="right fas fa-angle-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
                   <a href="{{ route('academic-year.create') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Add Academic Year</p>
+                  <i class="fas fa-plus-square nav-icon"></i>                    <p>Add Academic Year</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="{{ route('academic-year.read') }}" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
+                    <i class="far fa-calendar-check nav-icon"></i>
                     <p>Data Academic Year</p>
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="nav-icon fas fa-calendar"></i>
+                <p>
+                  Class Mgmt
+                  <i class="right fas fa-angle-right"></i>
+                </p>
+              </a>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <a href="{{ route('class.create') }}" class="nav-link">
+                    <i class="fas fa-plus-square nav-icon"></i>
+                    <p>Add Class</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="{{ route('class.read') }}" class="nav-link">
+                    <i class="far fa-calendar-check nav-icon"></i>
+                    <p>Data Class</p>
                   </a>
                 </li>
               </ul>
