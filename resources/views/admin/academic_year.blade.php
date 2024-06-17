@@ -8,12 +8,6 @@
         <div class="col-sm-6">
           <h1>Academic Year</h1>
         </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-            <li class="breadcrumb-item active">Academic Year</li>
-          </ol>
-        </div>
       </div>
     </div>
   </section>
@@ -60,26 +54,22 @@
 
       $.ajax({
         type: 'POST',
-        url: $(this).attr('action'),
+        url: this.action,
         data: $(this).serialize(),
-        success: function(response) {
+        success: function() {
           Swal.fire({
             title: 'Success!',
-            text: response.message,
+            text: 'Academic Year created successfully',
             icon: 'success',
-            confirmButtonText: 'OK'
+            timer: 1000,
+            showConfirmButton: false
           });
           $('#academicYearForm')[0].reset();
         },
         error: function(xhr) {
-          let errorMessages = '';
-          if (xhr.responseJSON && xhr.responseJSON.errors) {
-            $.each(xhr.responseJSON.errors, function(key, value) {
-              errorMessages += value[0] + '<br>';
-            });
-          } else {
-            errorMessages = 'Something went wrong.';
-          }
+          const errorMessages = xhr.responseJSON?.errors ?
+            Object.values(xhr.responseJSON.errors).map(error => error[0]).join('<br>') :
+            'Something went wrong.';
           Swal.fire({
             title: 'Error!',
             html: errorMessages,

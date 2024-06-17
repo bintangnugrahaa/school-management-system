@@ -21,5 +21,6 @@ Route::group(['prefix' => 'admin'], function () {
         Route::get('academic-year/create', [AcademicYearController::class, 'index'])->name('academic-year.create');
         Route::post('academic-year/store', [AcademicYearController::class, 'store'])->name('academic-year.store');
         Route::get('academic-year/read', [AcademicYearController::class, 'read'])->name('academic-year.read');
+        Route::delete('academic-year/{id}', [AcademicYearController::class, 'destroy'])->name('academic-year.delete');
     });
 });

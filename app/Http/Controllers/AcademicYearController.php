@@ -38,7 +38,8 @@ class AcademicYearController extends Controller
         return redirect()->route('academic-year.create')->with('success', 'Academic Year created successfully');
     }
 
-    public function read(){
+    public function read()
+    {
         $data['academic_year'] = AcademicYear::get();
         return view('admin.academic_year_list', $data);
     }
@@ -49,6 +50,13 @@ class AcademicYearController extends Controller
     public function show(AcademicYear $academicYear)
     {
         //
+    }
+
+    public function delete($id)
+    {
+        $data = AcademicYear::find($id);
+        $data->delete();
+        return redirect()->route('academic-year.read')->with('success', 'Academic Year deleted successfully');
     }
 
     /**

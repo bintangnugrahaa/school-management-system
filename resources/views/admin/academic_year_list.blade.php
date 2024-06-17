@@ -11,13 +11,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>DataTables</h1>
-        </div>
-        <div class="col-sm-6">
-          <ol class="breadcrumb float-sm-right">
-            <li class="breadcrumb-item"><a href="{{ route('admin.dashboard') }}">Home</a></li>
-            <li class="breadcrumb-item active">Data Academic Year</li>
-          </ol>
+          <h1>Data Academic Year</h1>
         </div>
       </div>
     </div>
@@ -29,10 +23,9 @@
         <div class="col-12">
 
           <div class="card">
-            <div class="card-header">
-              <h3 class="card-title">DataTable with default features</h3>
-            </div>
-
+            @if(Session::has('success'))
+            <div class="alert alert-success">{{ Session::get('success') }}</div>
+            @endif
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -40,8 +33,7 @@
                     <th>ID</th>
                     <th>Name</th>
                     <th>Created Time</th>
-                    <th>Edit</th>
-                    <th>Delete</th>
+                    <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -50,11 +42,12 @@
                     <td>{{$item->id}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->created_at}}</td>
-                    <td><a href="" class="btn btn-primary">Edit</a></td>
-                    <td><a href="" class="btn btn-danger">Delete</a></td>
+                    <td><a href="" class="btn btn-primary">Edit</a>
+                      <a href="{{ route('academic-year.delete', $item->id) }}" class="btn btn-danger">Delete</a>
+                    </td>
                   </tr>
                   @endforeach
-                </tfoot>
+                  </tfoot>
               </table>
             </div>
 
