@@ -20,17 +20,21 @@ class AdminController extends Controller
             'password' => 'required',
         ]);
         if (Auth::guard('admin')->attempt(['email' => $req->email, 'password' => $req->password])) {
-            echo "ok";
+            if (Auth::guard('admin')->user()->role != 'admin') {
+                Auth::guard('admin')->logout();
+                return redirect()->route('admin.login')->with('error', 'Unautherise user. Acccess Denied');
+            }
+            return redirect()->route('admin.dashboard');
         } else {
-            return redirect()->route('admin.login')->with('error', 'Email or Password is incorrect');
+            return redirect()->route('admin.login')->with('error', 'Email or Password is incorrect.');
         }
     }
     public function register()
     {
         $user = new User();
-        $user->name = 'Admin';
-        $user->role = 'admin';
-        $user->email = 'admin@gmail.com';
+        $user->name = 'Bintang';
+        $user->role = 'student';
+        $user->email = 'bintang@gmail.com';
         $user->password = Hash::make('admin');
         $user->save();
         return redirect()->route('admin.login')->with('success', 'User registered successfully');
@@ -38,6 +42,11 @@ class AdminController extends Controller
     public function dashboard()
     {
         return view('admin.dashboard');
+    }
+    public function logout()
+    {
+        Auth::guard('admin')->logout();
+        return redirect()->route('admin.login')->with('success', 'Logged out successfully');
     }
     public function form()
     {

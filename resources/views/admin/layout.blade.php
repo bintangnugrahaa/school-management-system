@@ -207,7 +207,7 @@
                 <i class="nav-icon fas fa-chart-pie"></i>
                 <p>
                   Charts
-                  <i class="right fas fa-angle-left"></i>
+                  <i class="right fas fa-angle-right"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
