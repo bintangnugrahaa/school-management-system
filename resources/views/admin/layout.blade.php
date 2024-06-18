@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard Admin</title>
+  <title>School Management System</title>
   <base href="{{ asset('admincss') }}/" />
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
@@ -33,13 +33,13 @@
   <div class="wrapper">
 
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+      <img class="animation__shake" src="dist/img//logo-univpancasila.png" alt="Logo Universitas Pancasila" height="60" width="60">
     </div>
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
 
-      <a href="index3.html" class="brand-link">
-        <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <a href="{{ route('admin.dashboard') }}" class="brand-link">
+        <img src="dist/img/logo-univpancasila.png" alt="Logo Universitas Pancasila" class="brand-image img-circle elevation-3" style="opacity: .8">
         <span class="brand-text font-weight-light">Admin LMS</span>
       </a>
 
