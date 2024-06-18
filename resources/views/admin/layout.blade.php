@@ -85,7 +85,7 @@
             </li>
             <li class="nav-item">
               <a href="{{ route('fee-head.read') }}" class="nav-link">
-                <i class="nav-icon fas fa-book"></i>
+                <i class="nav-icon fas fa-wallet"></i>
                 <p>
                   Fee Head Mgmt
                 </p>
