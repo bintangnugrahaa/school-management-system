@@ -7,20 +7,9 @@ use Illuminate\Http\Request;
 
 class FeeHeadController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         return view('admin.fee-head.fee_head');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
     }
 
     public function store(Request $request)
