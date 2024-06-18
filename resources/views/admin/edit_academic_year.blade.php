@@ -18,7 +18,7 @@
         <div class="col-md-12">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Add Academic Year</h3>
+              <h3 class="card-title">Edit Academic Year</h3>
             </div>
 
             <form id="academicYearForm" action="{{ route('academic-year.update') }}" method="post">
@@ -35,6 +35,7 @@
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="{{ route('academic-year.read') }}" class="btn btn-warning">Return</a>
               </div>
             </form>
           </div>

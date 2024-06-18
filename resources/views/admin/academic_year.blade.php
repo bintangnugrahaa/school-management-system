@@ -34,6 +34,7 @@
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="{{ route('academic-year.read') }}" class="btn btn-warning">Return</a>
               </div>
             </form>
           </div>

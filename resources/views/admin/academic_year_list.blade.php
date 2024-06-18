@@ -28,6 +28,7 @@
             @endif
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
+                <a href="{{ route('academic-year.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Academic Year</a>
                 <thead>
                   <tr>
                     <th>ID</th>

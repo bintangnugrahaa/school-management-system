@@ -40,7 +40,7 @@
 
       <a href="{{ route('admin.dashboard') }}" class="brand-link">
         <img src="dist/img/logo-univpancasila.png" alt="Logo Universitas Pancasila" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Admin LMS</span>
+        <span class="brand-text font-weight-light">Admin SMS</span>
       </a>
 
       <div class="sidebar">
@@ -61,56 +61,27 @@
 
             <li class="nav-item">
               <a href="{{ route('admin.dashboard') }}" class="nav-link">
-                <i class="nav-icon fas fa-server"></i>
+                <i class="nav-icon fas fa-stream"></i>
                 <p>
                   Dashboard
                 </p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="{{ route('academic-year.read') }}" class="nav-link">
                 <i class="nav-icon fas fa-calendar"></i>
                 <p>
                   Academic Year Mgmt
-                  <i class="right fas fa-angle-right"></i>
                 </p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ route('academic-year.create') }}" class="nav-link">
-                  <i class="fas fa-plus-square nav-icon"></i>                    <p>Add Academic Year</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('academic-year.read') }}" class="nav-link">
-                    <i class="far fa-calendar-check nav-icon"></i>
-                    <p>Data Academic Year</p>
-                  </a>
-                </li>
-              </ul>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-calendar"></i>
+              <a href="{{ route('class.read') }}" class="nav-link">
+                <i class="nav-icon fas fa-book"></i>
                 <p>
                   Class Mgmt
-                  <i class="right fas fa-angle-right"></i>
                 </p>
               </a>
-              <ul class="nav nav-treeview">
-                <li class="nav-item">
-                  <a href="{{ route('class.create') }}" class="nav-link">
-                    <i class="fas fa-plus-square nav-icon"></i>
-                    <p>Add Class</p>
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a href="{{ route('class.read') }}" class="nav-link">
-                    <i class="far fa-calendar-check nav-icon"></i>
-                    <p>Data Class</p>
-                  </a>
-                </li>
-              </ul>
             </li>
           </ul>
         </nav>

@@ -18,7 +18,7 @@
         <div class="col-md-12">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Add Class</h3>
+              <h3 class="card-title">Edit Class</h3>
             </div>
 
             <form id="classForm" action="{{ route('class.update') }}" method="post">
@@ -26,7 +26,7 @@
               <input type="hidden" name="id" value="{{ $classes->id }}">
               <div class="card-body">
                 <div class="form-group">
-                  <label for="name">Class</label>
+                  <label for="name">Class Name</label>
                   <input type="text" name="name" class="form-control" id="name" placeholder="Enter Class" value="{{ old('name', $classes ->name) }}">
                 </div>
                 @error('name')
@@ -35,6 +35,7 @@
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="{{ route('class.read') }}" class="btn btn-warning">Return</a>
               </div>
             </form>
           </div>
