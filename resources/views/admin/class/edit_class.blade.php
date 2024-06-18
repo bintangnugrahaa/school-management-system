@@ -6,7 +6,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Academic Year</h1>
+          <h1>Class</h1>
         </div>
       </div>
     </div>
@@ -18,16 +18,16 @@
         <div class="col-md-12">
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Add Academic Year</h3>
+              <h3 class="card-title">Add Class</h3>
             </div>
 
-            <form id="academicYearForm" action="{{ route('class.update') }}" method="post">
+            <form id="classForm" action="{{ route('class.update') }}" method="post">
               @csrf
               <input type="hidden" name="id" value="{{ $classes->id }}">
               <div class="card-body">
                 <div class="form-group">
-                  <label for="name">Academic Year</label>
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter academic year" value="{{ old('name', $classes->name) }}">
+                  <label for="name">Class</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Enter Class" value="{{ old('name', $classes ->name) }}">
                 </div>
                 @error('name')
                 <p class="text-danger">{{ $message }}</p>
@@ -50,7 +50,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   $(document).ready(function() {
-    $('#academicYearForm').on('submit', function(e) {
+    $('#classForm').on('submit', function(e) {
       e.preventDefault();
 
       $.ajax({
@@ -60,14 +60,14 @@
         success: function() {
           Swal.fire({
             title: 'Success!',
-            text: 'Academic Year updated successfully',
+            text: 'Class updated successfully',
             icon: 'success',
             timer: 1000,
             showConfirmButton: false
           }).then(function() {
             window.location.href = "{{ route('class.read') }}";
           });
-          $('#academicYearForm')[0].reset();
+          $('#classForm')[0].reset();
         },
         error: function(xhr) {
           const errorMessages = xhr.responseJSON?.errors ?

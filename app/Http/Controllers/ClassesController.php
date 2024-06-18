@@ -42,7 +42,7 @@ class ClassesController extends Controller
 
     public function edit($id)
     {
-        $data['academic_year'] = Classes::find($id);
+        $data['classes'] = Classes::find($id);
         return view('admin.class.edit_class', $data);
     }
 

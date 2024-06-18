@@ -42,8 +42,8 @@
                     <td>{{$item->id}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->created_at}}</td>
-                    <td><a href="{{ route('academic-year.edit', $item->id) }}" class="btn btn-primary">Edit</a>
-                      <a href="{{ route('academic-year.delete', $item->id) }}" onclick="return confirm('Are you sure want to delete?')" class="btn btn-danger">Delete</a>
+                    <td><a href="{{ route('class.edit', $item->id) }}" class="btn btn-primary">Edit</a>
+                      <a href="{{ route('class.delete', $item->id) }}" onclick="return confirm('Are you sure want to delete?')" class="btn btn-danger">Delete</a>
                     </td>
                   </tr>
                   @endforeach
