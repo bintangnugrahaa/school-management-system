@@ -33,7 +33,7 @@
   <div class="wrapper">
 
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="dist/img//logo-univpancasila.png" alt="Logo Universitas Pancasila" height="60" width="60">
+      <img class="animation__shake" src="dist/img/logo-univpancasila.png" alt="Logo Universitas Pancasila" height="60" width="60">
     </div>
 
     <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -105,6 +105,14 @@
     </aside>
 
   </div>
+
+  <footer class="main-footer">
+    <strong>Copyright &copy; 2014-2021 <a href="https://adminlte.io/">AdminLTE.io</a>.</strong>
+    All rights reserved.
+    <div class="float-right d-none d-sm-inline-block">
+      <b>Version</b> 3.2.0
+    </div>
+  </footer>
 
 
   <script src="plugins/jquery/jquery.min.js"></script>
