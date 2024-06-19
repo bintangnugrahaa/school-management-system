@@ -32,8 +32,7 @@
               <a href="{{ route('fee-head.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Fee Head</a>
                 <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Name</th>
+                    <th>Fee Head</th>
                     <th>Created Time</th>
                     <th>Action</th>
                   </tr>
@@ -41,7 +40,6 @@
                 <tbody>
                   @foreach($fee_head as $item)
                   <tr>
-                    <td>{{$item->id}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->created_at}}</td>
                     <td><a href="{{ route('fee-head.edit', $item->id) }}" class="btn btn-primary">Edit</a>

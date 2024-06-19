@@ -32,8 +32,7 @@
                 <a href="{{ route('academic-year.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Academic Year</a>
                 <thead>
                   <tr>
-                    <th>ID</th>
-                    <th>Name</th>
+                    <th>Academic Year</th>
                     <th>Created Time</th>
                     <th>Action</th>
                   </tr>
@@ -41,7 +40,6 @@
                 <tbody>
                   @foreach($academic_year as $item)
                   <tr>
-                    <td>{{$item->id}}</td>
                     <td>{{$item->name}}</td>
                     <td>{{$item->created_at}}</td>
                     <td><a href="{{ route('academic-year.edit', $item->id) }}" class="btn btn-primary">Edit</a>
