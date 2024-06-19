@@ -13,6 +13,21 @@ return new class extends Migration
     {
         Schema::create('fee_structures', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('academic_year_id')->constrained()->onDelete('cascade');
+            $table->foreignId('class_id')->constrained()->onDelete('cascade');
+            $table->foreignId('fee_head_id')->constrained()->onDelete('cascade');
+            $table->string('january')->nullable();
+            $table->string('february')->nullable();
+            $table->string('march')->nullable();
+            $table->string('april')->nullable();
+            $table->string('may')->nullable();
+            $table->string('june')->nullable();
+            $table->string('july')->nullable();
+            $table->string('august')->nullable();
+            $table->string('september')->nullable();
+            $table->string('october')->nullable();
+            $table->string('november')->nullable();
+            $table->string('december')->nullable();
             $table->timestamps();
         });
     }
