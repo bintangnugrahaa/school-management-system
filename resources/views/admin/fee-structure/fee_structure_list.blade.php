@@ -29,21 +29,21 @@
             @endif
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
-                <a href="{{ route('class.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Class</a>
+                <a href="{{ route('fee-structure.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Class</a>
                 <thead>
                   <tr>
-                    <th>Class</th>
+                    <th>Fee Structure</th>
                     <th>Created Time</th>
                     <th>Action</th>
                   </tr>
                 </thead>
                 <tbody>
-                  @foreach($class as $item)
+                  @foreach($fee_structure as $item)
                   <tr>
                     <td>{{$item->name}}</td>
                     <td>{{$item->created_at}}</td>
-                    <td><a href="{{ route('class.edit', $item->id) }}" class="btn btn-primary">Edit</a>
-                      <a href="{{ route('class.delete', $item->id) }}" onclick="return confirm('Are you sure want to delete?')" class="btn btn-danger">Delete</a>
+                    <td><a href="{{ route('fee-structure.edit', $item->id) }}" class="btn btn-primary">Edit</a>
+                      <a href="{{ route('fee-structure.delete', $item->id) }}" onclick="return confirm('Are you sure want to delete?')" class="btn btn-danger">Delete</a>
                     </td>
                   </tr>
                   @endforeach

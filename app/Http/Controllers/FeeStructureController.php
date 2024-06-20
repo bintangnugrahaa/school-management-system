@@ -29,7 +29,7 @@ class FeeStructureController extends Controller
 
     public function read()
     {
-        $data['fee_structure'] = FeeHead::get();
+        $data['fee_structure'] = FeeStructure::get();
         return view('admin.fee-structure.fee_structure_list', $data);
     }
 
