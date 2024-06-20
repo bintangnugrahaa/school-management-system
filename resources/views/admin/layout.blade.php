@@ -91,6 +91,14 @@
                 </p>
               </a>
             </li>
+            <li class="nav-item">
+              <a href="{{ route('fee-structure.read') }}" class="nav-link">
+                <i class="nav-icon fas fa-wallet"></i>
+                <p>
+                  Fee Structure Mgmt
+                </p>
+              </a>
+            </li>
           </ul>
         </nav>
 
