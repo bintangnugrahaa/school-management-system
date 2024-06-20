@@ -127,7 +127,7 @@
               </div>
               <div class="card-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="{{ route('class.read') }}" class="btn btn-warning">Return</a>
+                <a href="{{ route('fee-structure.read') }}" class="btn btn-warning">Return</a>
               </div>
             </form>
           </div>

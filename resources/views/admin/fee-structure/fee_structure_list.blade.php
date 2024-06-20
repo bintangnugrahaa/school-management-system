@@ -12,7 +12,7 @@
     <div class="container-fluid">
       <div class="row mb-2">
         <div class="col-sm-6">
-          <h1>Data Class</h1>
+          <h1>Data Fee Structure</h1>
         </div>
       </div>
     </div>
@@ -29,7 +29,7 @@
             @endif
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
-                <a href="{{ route('fee-structure.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Class</a>
+                <a href="{{ route('fee-structure.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Fee Structure</a>
                 <thead>
                   <tr>
                     <th>Fee Structure</th>
