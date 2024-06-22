@@ -21,10 +21,13 @@ class FeeStructureController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'academic_year' => 'required',
-            'class' => 'required',
-            'fee_head' => 'required'
+            'academic_year_id' => 'required',
+            'class_id' => 'required',
+            'fee_head_id' => 'required',
         ]);
+
+        FeeStructure::create($request->all());
+        return redirect()->route('fee-structure.create')->with('success', 'Fee Structure created successfully');
     }
 
     public function read()

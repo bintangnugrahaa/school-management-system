@@ -21,7 +21,7 @@
               <h3 class="card-title">Add Fee Structure</h3>
             </div>
 
-            <form id="academicYearForm" action="{{ route('fee-structure.store') }}" method="post">
+            <form id="feeStructureForm" action="{{ route('fee-structure.store') }}" method="post">
               @csrf
               <div class="card-body">
                 <div class="row">
@@ -143,7 +143,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
   $(document).ready(function() {
-    $('#academicYearForm').on('submit', function(e) {
+    $('#feeStructureForm').on('submit', function(e) {
       e.preventDefault();
 
       $.ajax({
@@ -160,7 +160,7 @@
           }).then(function() {
             window.location.href = "{{ route('class.read') }}";
           });
-          $('#academicYearForm')[0].reset();
+          $('#feeStructureForm')[0].reset();
         },
         error: function(xhr) {
           const errorMessages = xhr.responseJSON?.errors ?

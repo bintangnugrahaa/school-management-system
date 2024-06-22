@@ -16,6 +16,8 @@
   <link rel="stylesheet" href="plugins/icheck-bootstrap/icheck-bootstrap.min.css">
 
   <link rel="stylesheet" href="dist/css/adminlte.min2167.css?v=3.2.0">
+  <link rel="shortcut icon" href="dist/img/logo-univpancasila.png" type="image/x-icon">
+
 </head>
 
 <body class="hold-transition login-page">
