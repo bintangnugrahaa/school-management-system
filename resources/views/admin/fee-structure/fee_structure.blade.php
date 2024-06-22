@@ -158,7 +158,7 @@
             timer: 1000,
             showConfirmButton: false
           }).then(function() {
-            window.location.href = "{{ route('class.read') }}";
+            window.location.href = "{{ route('fee-structure.read') }}";
           });
           $('#feeStructureForm')[0].reset();
         },

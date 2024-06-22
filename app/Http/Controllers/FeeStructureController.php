@@ -32,7 +32,7 @@ class FeeStructureController extends Controller
 
     public function read()
     {
-        $data['fee_structure'] = FeeStructure::get();
+        $data['fee_structure'] = FeeStructure::with(['FeeHead', 'AcademicYear', 'Class'])->latest()->get();
         return view('admin.fee-structure.fee_structure_list', $data);
     }
 

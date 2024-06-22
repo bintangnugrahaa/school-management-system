@@ -25,4 +25,19 @@ class FeeStructure extends Model
         'november',
         'december',
     ];
+
+    public function FeeHead()
+    {
+        return $this->belongsTo(FeeHead::class, 'fee_head_id');
+    }
+
+    public function AcademicYear()
+    {
+        return $this->belongsTo(AcademicYear::class, 'academic_year_id');
+    }
+
+    public function Class()
+    {
+        return $this->belongsTo(Classes::class, 'class_id');
+    }
 }
