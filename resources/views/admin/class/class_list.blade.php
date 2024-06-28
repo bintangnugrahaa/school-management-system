@@ -29,7 +29,7 @@
             @endif
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
-              <a href="{{ route('class.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Class</a>
+                <a href="{{ route('class.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Class</a>
                 <thead>
                   <tr>
                     <th>Class</th>

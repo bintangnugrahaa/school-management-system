@@ -45,8 +45,8 @@ class FeeStructureController extends Controller
 
     public function edit($id)
     {
-        $data['fee_head'] = FeeHead::find($id);
-        return view('admin.fee-head.edit_fee_head', $data);
+        $data['fee_structure'] = FeeStructure::find($id);
+        return view('admin.fee-structure.edit_fee_structure', $data);
     }
 
     public function update(Request $request)

@@ -29,7 +29,7 @@
             @endif
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
-              <a href="{{ route('fee-head.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Fee Head</a>
+                <a href="{{ route('fee-head.create') }}" style="margin-bottom: 10px !important;" class="btn btn-primary"><i class="fas fa-plus"></i> Add Fee Head</a>
                 <thead>
                   <tr>
                     <th>Fee Head</th>
